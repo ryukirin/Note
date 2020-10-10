@@ -39,17 +39,23 @@
 ![1602308775526](image/1602308775526.png)
 
 式1：
+
 $$
 min_{\theta_0\theta_1}{{1}\over{2m}}\displaystyle \sum^{m}_{i=1}{(h_0(x^i)-y^i)^2}
 $$
+
 令式2：
+
 $$
 J(\theta_0,\theta_1)={{1}\over{2m}}\displaystyle \sum^{m}_{i=1}{(h_0(x^i)-y^i)^2}
 $$
+
 则式1可写为
+
 $$
 min_{\theta_0\theta_1}J(\theta_0,\theta_1)
 $$
+
 $J(\theta_0,\theta_1)$即为代价函数（lost function）或平方误差函数
 
 ![1602315144057](image/1602315144057.png)
