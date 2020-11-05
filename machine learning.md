@@ -119,7 +119,7 @@ $$
 
 - - X：a行n列，元素为A的第i行的各个元素和B的第i列的各个元素依次相乘再相加
 
-例$\left[ \begin{matrix} 1 & 2 &1 & 5 \\ 0 & 3 & 0 &4 \\ -1& -2 & 0 & 0\end{matrix} \right]\left[\begin{matrix}1\\3\\2\\1\end{matrix}\right]=$$\left[\begin{matrix}1*1+2*3+1*2+5*1\\0*1+3*3+0*2+4*1\\-1*1+-2*3+0*2+0*1\end{matrix}\right]=$ $\left[\begin{matrix}14\\13\\-7\end{matrix}\right]$
+![202011060008](image/202011060008.JPG)
 
 ![202011052357](image/202011052357.JPG)
 
