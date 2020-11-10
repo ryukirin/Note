@@ -130,3 +130,31 @@ $$
 ![202011060000](image/202011060000.JPG)
 
 [^预测房子的价格2]: 使用矩阵乘法使计算机更好的运算
+
+### 矩阵乘法特征
+
+有矩阵A和矩阵B
+
+$A\times B \neq B\times A$ 
+
+$(A\times B )\times C= B\times (A\times C)$ 
+
+#### 单位矩阵
+
+n x n矩阵，对角线元素是1，其余皆为0，记作$I_{n\times n}$
+
+特性：对于任意的矩阵A
+
+$A\cdot I = I\cdot A=A$ 
+
+$A\times I = I\times A$
+
+### 矩阵的逆和转置
+
+#### 逆矩阵
+
+只有m x m的矩阵（方阵 square matrix）才有逆矩阵
+
+$A\times A^{-1} = A^{-1}\times A=I$
+
+用pytorch求矩阵的逆：
