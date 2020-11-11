@@ -6,4 +6,4 @@ study notes
 
 - The watermelon book refers to the book "Machine Learning" by Zhi-Hua Zhou. The formula derivation will refer to the project [pumpkin-book](https://github.com/datawhalechina/pumpkin-book)  on GitHub
 
-- pytorch study notes is follow the [pytorch Chinese document](https://pytorch.apachecn.org/docs/1.4/blitz/tensor_tutorial.html) to learn.
+- pytorch study notes is follow the [pytorch Chinese document](https://pytorch.apachecn.org/docs/1.4/) to learn.
