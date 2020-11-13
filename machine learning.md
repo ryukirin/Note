@@ -158,3 +158,33 @@ $A\times I = I\times A$
 $A\times A^{-1} = A^{-1}\times A=I$
 
 用pytorch求矩阵的逆：
+
+```python
+import torch
+
+# matrix inverse
+def invmat():
+    a = torch.rand(3, 3)
+    b = torch.inverse(a)
+    print('a =', a)
+    print('a\'s inverse matrix is:\n', b)
+
+if __name__ == '__main__':
+    print('matrix inverse')
+    invmat()
+```
+
+结果：
+
+```python
+matrix inverse
+a = tensor([[0.3769, 0.0635, 0.6297],
+        [0.7425, 0.3456, 0.7372],
+        [0.5285, 0.6245, 0.9408]])
+a's inverse matrix is:
+ tensor([[-1.2713,  3.1347, -1.6055],
+        [-2.9043,  0.2050,  1.7833],
+        [ 2.6419, -1.8969,  0.7811]])
+
+Process finished with exit code 0
+```
