@@ -202,6 +202,38 @@ a's inverse matrix is:
 Process finished with exit code 0
 ```
 
+#### 转置矩阵
+
+```python
+import torch
+
+# matrix transpose
+def tmatrix():
+    a = torch.rand(2,4)
+    print('a =', a)
+    b = torch.t(a)
+    print('a\'s transpose matrix is\n', b)
+
+if __name__ == '__main__':
+    print('matrix transpose')
+    tmatrix()
+```
+
+结果：
+
+```python
+matrix transpose
+a = tensor([[0.0471, 0.2030, 0.4294, 0.2553],
+        [0.0069, 0.1753, 0.1336, 0.5577]])
+a's transpose matrix is
+ tensor([[0.0471, 0.0069],
+        [0.2030, 0.1753],
+        [0.4294, 0.1336],
+        [0.2553, 0.5577]])
+
+Process finished with exit code 0
+```
+
 ## 多元线性回归的多特征
 
 ### 多元线性回归的假设形式
