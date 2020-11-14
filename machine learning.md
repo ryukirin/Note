@@ -164,11 +164,19 @@ import torch
 
 # matrix inverse
 def invmat():
-    a = torch.rand(3, 3)
-    b = torch.inverse(a)
+    arr1 = input('please input nine number to create 3 by 3 matrix\n'
+                '(Use spaces between numbers and enter between lines):\n')
+    arr2 = input()
+    arr3 = input()
+    line1 = [int(n) for n in arr1.split()]
+    line2 = [int(n) for n in arr2.split()]
+    line3 = [int(n) for n in arr3.split()]
+    a = torch.tensor([[line1[0], line1[1], line1[2]],
+                      [line2[0], line2[1], line2[2]],
+                      [line3[0], line3[1], line3[2]]], dtype=float)
     print('a =', a)
+    b = a.inverse()
     print('a\'s inverse matrix is:\n', b)
-
 if __name__ == '__main__':
     print('matrix inverse')
     invmat()
@@ -178,13 +186,18 @@ if __name__ == '__main__':
 
 ```python
 matrix inverse
-a = tensor([[0.3769, 0.0635, 0.6297],
-        [0.7425, 0.3456, 0.7372],
-        [0.5285, 0.6245, 0.9408]])
+please input nine number to create 3 by 3 matrix
+(Use spaces between numbers and enter between lines):
+0 1 2
+1 1 4
+2 -1 0
+a = tensor([[ 0.,  1.,  2.],
+        [ 1.,  1.,  4.],
+        [ 2., -1.,  0.]], dtype=torch.float64)
 a's inverse matrix is:
- tensor([[-1.2713,  3.1347, -1.6055],
-        [-2.9043,  0.2050,  1.7833],
-        [ 2.6419, -1.8969,  0.7811]])
+ tensor([[ 2.0000, -1.0000,  1.0000],
+        [ 4.0000, -2.0000,  1.0000],
+        [-1.5000,  1.0000, -0.5000]], dtype=torch.float64)
 
 Process finished with exit code 0
 ```
