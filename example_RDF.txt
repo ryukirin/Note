@@ -1,0 +1,124 @@
+@prefix : <http://www.example.org/discusiion_facilitator#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+# there will no prefix when store in Neo4j
+
+:workshop001 a :Workshop .
+
+:setup a :Step ;
+	rdfs:label 'setup' .
+
+:what a :Substep ;
+	rdfs:label 'want to improve the efficiency of class learning' .
+
+:whom a :Substep ;
+	rdfs:label 'students' .
+
+:who a :Substep ;
+	rdfs:label 'Teaching and Research Group' .
+
+:when a :Substep ;
+	rdfs:label 'time' ;
+	:start_time '10:00a.m.' ;
+	:end_time '2:00p.m.' .
+
+:default_how a :Substep ;
+	rdfs:label 'default how' .
+
+:how a :Substep ;
+	 rdfs:label 'how' .
+
+:setup :hasStep :what, :whom, :who, :when, :how .
+
+:how_step01 a :Step ;
+	rdfs:label 'current_state' ;
+	dc:title 'Analyze the current situation' ;
+	:time '15mins' .
+
+:how_step02 a :Step ;
+	rdfs:label 'ideal_state' ;
+	dc:title 'Clarify expectations' ;
+	:time '15mins' .
+
+:how_step03 a :Step ;
+	rdfs:label 'problem' ;
+	dc:title 'Gap analysis' ;
+	:time '15mins' .
+
+:how_step04 a :Step ;
+	rdfs:label 'cause' ;
+	dc:title 'Find the reason' ;
+	:time '30mins' .
+
+:how_step05 a :Step ;
+	rdfs:label 'solution' ;
+	dc:title 'Propose and evaluate solutions' ;
+	:time '60mins' .
+
+:how_step06 a :Step ;
+	rdfs:label 'key_result' ;
+	dc:title 'Formulate key results' ;
+	:time '30mins' .
+
+:how_step07 a :Step ;
+	rdfs:label 'summary' ;
+	dc:title 'summary' ;
+	:time '30mins' .
+
+:default_how :hasStep :how_step01, :how_step02, :how_step03, :how_step04, :how_step05, :how_step06, :how_step07 .
+
+:how = :default_how .
+
+:how_step08 a :Step ;
+	rdfs:label 'rest' ;
+	dc:title 'rest' ;
+	:time '30mins' .
+
+:how :hasStep :how_step08
+:how_step02 :preStep :how_step01 .
+:how_step03 :preStep :how_step02 .
+:how_step04 :preStep :how_step03 .
+:how_step05 :preStep :how_step04 .
+:how_step08 :preStep :how_step05 .
+:how_step06 :preStep :how_step08 .
+:how_step07 :preStep :how_step06 .
+
+:current_state001 a :Currentstate ;
+	rdfs:label 'absent-minded in the class' .
+
+:ideal_state001 a :Idealstate ;
+	rdfs:label 'Can concentrate in class' .
+
+:problem001 a :Problem ;
+	rdfs:label 'The students lack concentration' ;
+	:currentState :current_state001 ;
+	:idealState :ideal_state001 .
+
+:cause001 a :Cause ;
+	rdfs:label 'feel bored in class' .
+
+:class001 a rdfs:Class ;
+	rdfs:label 'cause of student' .
+
+:pro001 a :Pro ;
+	rdfs:label 'Indeed, I find it difficult to make students interested in some knowledge.' .
+
+:solution001 a :Solution ;
+	rdfs:label 'Make knowledge more vividly.' .
+
+:key_result001 a :Keyresult ;
+	rdfs:label 'Class average score increased by 5 points at next test' .
+
+:idea001 a :Idea ;
+	rdfs:label 'use slide' ;
+	:effect :key_result001 .
+
+:cause001 a :class001 .
+:cause001 :pro :pro001 .
+:ideal_state001 :keyResult :key_result001 .
+:problem001 :cause :cause001 .
+:solution001 :idea :idea001 ;
+	:effect :key_result001 .
+:cause001 :solution :solution001 .
+:how_step04 :hasClass :class001 .
