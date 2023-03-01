@@ -2,10 +2,19 @@
 
 ## System Structure
 
+### Whiteboard with speech recognition
+
 ![image-20230224130611829](https://raw.githubusercontent.com/ryukirin/Note/main/image/image-20230224-2.png)
 
 - user voice send to the whiteboard with speech recognition function, after being recognized as text, it is sent to the server.
-- After storing node and relationship into RDF database, send the node and relationship information to whiteboard.
+- After storing node and relationship into RDF database, server send the node and relationship information to whiteboard.
+
+### Whiteboard without speech recognition
+
+![image-20230301112230628](https://raw.githubusercontent.com/ryukirin/Note/main/image/image-20230301.png)
+
+- user voice send to the speech recognition program, after being recognized as text, it is sent to the server.
+- After storing node and relationship into RDF database, server send the node and relationship information to whiteboard.
 
 ## Use Case
 
@@ -65,3 +74,4 @@
         "user_speech": "user speech content"
     }
     ```
+
