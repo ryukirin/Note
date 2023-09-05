@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>权重的叠加</title>
+    <style>
+        ul li {
+            color: green;
+        }
+
+        li {
+            color: red;
+        }
+
+        .nav li {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>显示为绿色字体</li>
+        <li>因为ul li设置的绿色而li设置的红色</li>
+        <li>ul li权重叠加0,0,0,1+0,0,0,1=0,0,0,2>li的权重0,0,0,1</li>
+    </ul>
+    <ul class="nav">
+        <li>显示为蓝色字体</li>
+        <li>因为ul li设置的绿色而.nav li设置的蓝色</li>
+        <li>.nav li权重叠加0,0,1,0+0,0,0,1=0,0,1,1>0,0,0,2</li>
+    </ul>
+</body>
+
+</html>

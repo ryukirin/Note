@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外边距</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+        }
+
+        /* .one {
+            margin-bottom: 20px;
+        } */
+
+        .two {
+            /* margin-top: 20px; */
+            margin: 30px;
+        }
+
+        .one {
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .bigger {
+            margin-bottom: 100px;
+        }
+
+        .smaller {
+            margin-top: 50px;
+        }
+
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: purple;
+            margin-top: 50px;
+        }
+
+        .son1 {
+            width: 200px;
+            height: 200px;
+            margin-top: 50px;
+            background-color: orange;
+        }
+
+        .son2 {
+            width: 200px;
+            height: 200px;
+            margin-top: 60px;
+            background-color: orange;
+        }
+
+        .father1 {
+            width: 400px;
+            height: 400px;
+            background-color: purple;
+            margin-top: 200px;
+            /* 可以为父元素定义上边框 */
+            /* 透明边框 */
+            /* border: 1px solid transparent; */
+
+            /* 可以为父元素定义上内边框 */
+            /* padding: 1px; */
+
+            /* 可以为父元素添加overflow:hidden */
+            /* 这个方法不会改变盒子大小 */
+            overflow: hidden;
+        }
+
+        .son3 {
+            width: 200px;
+            height: 200px;
+            margin-top: 50px;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <span>居中</span>
+    </div>
+    <div class="two">2</div>
+    <div class="bigger">相邻块元素垂直外边距合并<br />margin-bottom: 100px;</div>
+    <div class="smaller">margin-top: 50px;<br />取两个值中较大者 建议尽量只给一个盒子添加margin</div>
+    <div class="father">
+        <div class="son1">对于两个嵌套关系（父子关系）的块元素<br />margin-top: 50px;</div>嵌套块元素垂直外边距的塌陷 margin-top: 100px;
+        <div class="son2">父元素的margin-top取两个值较大的，并且子元素不会与父元素有上边距<br />注：这种情况只出现在父元素下第一个子元素中。margin-top: 100px;</div>
+    </div>
+    <div class="father1">
+        <div class="son3">对于两个嵌套关系（父子关系）的块元素<br />margin-top: 50px;</div>嵌套块元素垂直外边距的塌陷解决方案 margin-top: 100px;<br />
+        - 可以为父元素定义上边框<br />
+        - 可以为父元素定义上内边框<br />
+        - 可以为父元素添加overflow:hidden<br />
+    </div>
+</body>
+
+</html>

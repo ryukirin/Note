@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS的引入方式</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 当设置有冲突时，style和link哪个在下哪个生效 -->
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>内部样式表生效则该行为红色</p>
+    <p style="color: green;">行内样式表生效则该行为绿色</p>
+    <p>外部样式表生效则字体加粗</p>
+</body>
+</html>

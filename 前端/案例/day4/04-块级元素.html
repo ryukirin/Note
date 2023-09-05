@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>块级元素</title>
+</head>
+<style>
+    p {
+        height: 400px;
+        width: 16px;
+        background-color: skyblue;
+    }
+
+    h3 {
+        background-color: orange;
+    }
+
+    ul {
+        background-color: skyblue;
+    }
+
+    li {
+        background-color: blue;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .span1 {
+        background-color: pink;
+    }
+
+    .span2 {
+        background-color: greenyellow;
+    }
+</style>
+
+<body>
+    <div>块级元素独占一行</div>这行就被挤到了下一行
+    <p>可以设置宽高内外边距，所以这行变成了竖排</p>这行还是被挤到了下一行
+    <h3>宽度默认是容器（父级宽度）的100%</h3>
+    <ul>
+        <li><span class="span1">是一个容器及盒子</span>
+            <span class="span2">里边可以放行内或者块级元素。</span>
+        </li>
+    </ul>
+</body>
+
+</html>

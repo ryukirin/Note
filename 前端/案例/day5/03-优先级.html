@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>优先级</title>
+    <style>
+        body {
+            font: italic 700 20px "黑体";
+            color: red;
+            text-decoration: none;
+        }
+
+        p {
+            font: italic 700 20px "黑体";
+            text-decoration: none;
+            color: green;
+        }
+
+        .a {
+            font: normal 700 20px "黑体";
+            text-decoration: none;
+            color: yellowgreen;
+        }
+
+        #a {
+            font-size: 16px;
+            text-decoration: none;
+            color: skyblue;
+            background-color: skyblue;
+        }
+
+        a {
+            /* 链接浏览器默认制定了一个样式 蓝色 有下划线
+            故继承过来的text-decoration和color全都无效 */
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            /* background-color: purple; */
+            width: 100px;
+            height: 20px;
+            text-align: center;
+            background-color: purple !important;
+            line-height: 20px;
+        }
+
+        a:hover {
+            background-color: blue !important;
+        }
+
+        #link:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    body的样式是20px黑体倾斜无装饰加粗红字
+    <p>
+        标签p的样式是20px黑体倾斜无装饰加粗绿字<br />
+        因为元素样式优先级高于继承样式故显示为绿字
+    </p>
+    <p class="a">
+        class a 的样式为<br />
+        20px黑体不倾斜无装饰加粗黄绿字<br />
+        因为类选择器的优先级高于元素选择器<br />
+        故显示为黄绿没有倾斜
+    </p>
+    <p class="a" id="a" style="background-color: orange;">
+        id为a的样式为<br />
+        16px黑体不倾斜无装饰加粗天蓝字<br />
+        因为ID选择器的优先级比类选择器高<br />
+        故显示为16px水蓝色<br />
+        同时#a中设置了水蓝色背景<br />
+        但是行内样式设置了橙色背景<br />
+        因为行内样式优先级高于id选择器<br />
+        故显示为橙色背景<br />
+        <a href="#" id="link" style="background-color: white;">这是个链接块</a>
+        <br />根据行内样式style="background-color: white;"和ID样式<br />
+        #link:hover {<br />
+        background-color: red;<br />
+        }<br />
+        本应该是背景色为白色鼠标放上时背景色变红<br />
+        但是给元素样式a和伪类选择器a:hover加上了!important<br />
+        故按照这两个设置成了背景为紫色 鼠标放上为蓝色<br />
+    </p>
+</body>
+
+</html>

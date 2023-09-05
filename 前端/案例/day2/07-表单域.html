@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单域</title>
+</head>
+<body>
+    <h4>2021魔纪人口普查</h4>
+    <form action="demo.php" method="get" name="fromdemo">
+        <!-- text文本框 可以输入文本 -->
+        你的姓名：<input type="text" name="name" value="请输入你的名字" maxlength="6"/><br />
+
+        <!-- password密码框 看不见输入 -->
+        你的年龄：<input type="password" name="age"/><br />
+
+        <!-- radio 单选按钮 可以实现多选一 -->
+        <!-- name 是表单元素的名字 单选框只有有相同的名字时才可以多选一 -->
+        <!-- checked 当打开界面时默认选中 -->
+        所属阵营：
+        神滨魔法联盟<input type="radio" name="where" value="kamihama" checked="checked"/> 
+        Neo-Magius<input type="radio" name="where" value="neomagius"/><br />
+
+        <!-- checkbox 复选框 可以实现多选 -->
+        再选一次：
+        神滨魔法联盟<input type="checkbox" name="realocal" value="kamihama"/> 
+        Neo-Magius<input type="checkbox" name="realocal" value="neomagius"/> 
+        PROMISED BLOOD<input type="checkbox" name="realocal" value="BLOOD"/> 
+        时女一族<input type="checkbox" name="realocal" value="Tokime"/> 
+        Puella Care<input type="checkbox" name="realocal" value="Puella"/><br />
+
+        <!-- button 可点击按钮 通过JavaScript启动脚本 -->
+        <input type="button" value="卧底请点击此按钮"/>
+        <input type="button" value="倒戈请点击此按钮"/><br />
+
+        <!-- file 供文件上传 -->
+        上传证件照：<input type="file" /><br />
+        
+        <!-- submit 提交按钮 把表单数据发送到服务器 -->
+        <input type="submit" value="调查完成"/>
+        <!-- reset 重置按钮 会清除表单中的所有数据 -->
+        <input type="reset" value="重新调查"/>
+    </form>
+</body>
+</html>

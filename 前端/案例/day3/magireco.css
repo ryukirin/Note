@@ -1,0 +1,48 @@
+* {
+    line-height: 24px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.first_title {
+    font: 900 36px "Microsoft Yahei";
+}
+.head {
+    width: 300px;
+    background-color: rgb(217, 239, 240);
+}
+.search {
+    text-align: center;
+}
+.content {
+    text-align: center;
+    font-weight: 700;
+}
+.contents_first {
+    text-indent: 0em;
+}
+.contents_second {
+    text-indent: 2em;
+}
+.second_title {
+    font: 900 24px "Microsoft Yahei";
+}
+.introduction {
+    width: 100%;
+}
+.normal_image {
+    text-align: center;
+}
+.normal_image img {
+    width: 700px;
+}
+.disc_image_table {
+    text-align: center;
+    width: 100%;
+}
+.third_title {
+    font: lighter 20px Arial;
+    color: rgb(38, 38, 65);
+}

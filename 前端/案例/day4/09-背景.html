@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景</title>
+    <style>
+        div {
+            height: 300px;
+            width: 300px;
+            background-image: url(https://i1.hdslb.com/bfs/face/fa23adfbc984a9953988a51d459174a7f46f90f2.jpg@96w_96h_1c_1s.webp);
+            background-repeat: no-repeat;
+            font-weight: 700;
+        }
+
+        .a {
+            background-color: aquamarine;
+        }
+
+        .b,
+        .c,
+        .d,
+        .e {
+            background-image: url(https://i1.hdslb.com/bfs/face/fa23adfbc984a9953988a51d459174a7f46f90f2.jpg@96w_96h_1c_1s.webp);
+        }
+
+        .b {
+            background-repeat: no-repeat;
+        }
+
+        .c {
+            background-repeat: repeat;
+        }
+
+        .d {
+            background-repeat: repeat-x;
+        }
+
+        .e {
+            background-repeat: repeat-y;
+        }
+
+        .g {
+            /* background-position: center top; */
+            background-position: 80px 16px;
+            background-color: aquamarine;
+            font-size: 16px;
+        }
+
+        .h {
+            /* background-position: center top; */
+            background-position: 80px top;
+            background-color: aquamarine;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a">背景颜色</div>
+    <div class="b">不平铺</div>
+    <div class="c">平铺</div>
+    <div class="d">横着铺</div>
+    <div class="e">竖着铺</div>
+    <div class="f">靠上居中</div>
+    <div class="g">精准定位↘</div>
+    <div class="h">混合定位→</div>
+</body>
+
+</html>

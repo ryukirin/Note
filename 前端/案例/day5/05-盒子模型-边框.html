@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            /* border-width 边框粗细 一般情况下用px */
+            border-width: 5px;
+        }
+
+        .div1 {
+            /* border-style 边框样式 solid 实线边框 dashed 虚线 dotted 点状*/
+            border-style: solid;
+            border-color: blue;
+        }
+
+        .div2 {
+            /* border-style 边框样式 solid 实线边框 dashed 虚线 dotted 点状*/
+            border-style: dashed;
+            border-color: red;
+        }
+
+        .div3 {
+            /* border-style 边框样式 solid 实线边框 dashed 虚线 dotted 点状*/
+            border-style: dotted;
+            border-color: yellow;
+        }
+
+        .div4 {
+            /* border 边框 样式 颜色 没有顺序*/
+            border: 1px solid red;
+        }
+
+        .div5 {
+            /* border-top 上边框 border-bottom 下边框 
+            border-left 左边框 border-right 右边框*/
+            border-top: 5px solid blue;
+            border-bottom: 5px solid red;
+            border-left: 5px solid yellow;
+            border-right: 5px solid purple;
+        }
+
+        .test {
+            /* 上边框红色 其余边框蓝色 */
+            border: 2px solid blue;
+            border-top: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <div class="div5"></div>
+    <div class="test"></div>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素显示模式转换</title>
+    <style>
+        a {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            text-decoration: none;
+            color: white;
+            /* 把行内元素转换成块级元素 */
+            display: block;
+        }
+
+        a:hover {
+            background-color: orange;
+            color: purple;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: yellowgreen;
+            color: palevioletred;
+            /* 转化为行内元素 */
+            display: inline;
+        }
+
+        span {
+            background-color: blue;
+            color: white;
+            width: 200px;
+            height: 200px;
+            /* 转化为行内块元素 */
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">kuukaa</a>
+    <a href="#">虽然用的是a标签，但是转换了模式成了块级元素</a>
+    <a href="#">可以设置高度了</a>
+    <a href="#">且一行只能放一个</a>
+    <div>sumire</div>
+    <div>chi</div>
+    <div>虽然用的是div但是转换了模式成了行内元素，高度设置就失效了</div>
+    <div>且一行可以放多个</div>
+    <span>ren</span>
+    <span>虽然用的是span但是转换了模式成了行内块元素</span>
+    <span>可以设置高度也可以一行放多个了</span>
+</body>
+
+</html>

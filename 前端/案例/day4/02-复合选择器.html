@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器</title>
+    <style>
+        /* ol里的li 后代选择器*/
+        ol li {
+            color: red;
+        }
+
+        ol li ul li {
+            color: blue;
+            font-size: 30px;
+        }
+
+        ul li {
+            font-weight: 700;
+        }
+
+        /* 子选择器 */
+        div>p {
+            color: blue;
+        }
+
+        /* 并集选择器 同时选择多个标签 
+        喜欢竖着写*/
+        ol,
+        span {
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>后代选择器</h2>
+    <ol>
+        <li>
+            <ul>
+                <li>ol中的li中的ul中的li</li>
+                <li>CSS ol li ul li中设定颜色为蓝色字号30</li>
+                <li>字体粗细是ol li中设置的</li>
+            </ul>
+        </li>
+        <li>ol的li</li>
+        <li>CSS ol li 中设定颜色为红色</li>
+        <li>
+            <ol>
+                <li>这是ol中的li中的ol中的li</li>
+                <li>为了和上边的蓝色区分</li>
+                <li>该颜色在ol li中设置</li>
+                <li>此时li可以是ol的重孙子li中ol中li</li>
+                <li>很乱是吧</li>
+                <li>所以开发中最好用class区别并且写全一点</li>
+                <li>或者用子选择器</li>
+            </ol>
+        </li>
+    </ol>
+    <ul>
+        <li>ul的li</li>
+        <li>CSS ul li 中设定字体粗细为700</li>
+    </ul>
+    <h2>子选择器</h2>
+    <div>
+        div直属
+        <p>
+            div->p，只把这一行改蓝，用子选择器
+            <ui>
+                <li>
+                    <p>div->p->ul->li->p</p>
+                    <p>如果用后代选择器</p>
+                </li>
+                <li>
+                    <p>div->p->ul->li->p</p>
+                    <p>这几行也会变蓝</p>
+                </li>
+            </ui>
+        </p>
+    </div>
+    <h2>并集选择器</h2>
+    <span>span 使用并集选择器设置了span和ol的背景色为黄绿色</span>
+    <p>p所以上一行和前边的ol背景色为黄绿色 </p>
+</body>
+
+</html>

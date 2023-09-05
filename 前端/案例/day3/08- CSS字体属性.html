@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体属性</title>
+    <style>
+        /* h4 {
+            font-style: normal;
+            /* 使用数字控制粗细，不带单位，仅限整百，实际开发中更提倡。400相当于normal
+            font-weight: 400;
+            font-size: 20px;
+            font-family: "黑体";
+        } */
+        /* 复合属性，和上述四行代码等效
+        font: font-style font-weight font-size/line-height font-family;
+        行高没有就不写*/
+        h4 {
+            /* font: normal 400 20px "黑体"; 
+            前两个是默认值所以可以省略，但是后两个必须保留（不管是不是默认）
+            否则font设置不生效*/
+            font: 20px "黑体";
+        }
+        p {
+            font-family: "Microsoft Yahei";
+        }
+        .bold {
+            font-weight: bold;
+            font-style: italic;
+        }
+        em {
+            /* 让倾斜的字体不倾斜 */
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <h4>
+        沉默的魔女化身<br />
+        其姿态为呼子鸟
+    </h4>
+    <p>
+        这份感情的主人，察觉到自己的Doppel无法示人，而一直无法直视其姿态。
+    </p>
+    <p>
+        这个Doppel沉默不语、不愿听取，将一切用布块缠紧溃碎，寻求着能填满其胸口空缺之物。
+    </p>
+    <p>
+        明明不得不去呼唤某人、依靠某人，胆怯的这个Doppel却恐惧去直视被布料掩盖的现实，塞紧双耳沉默地存续着。
+    </p>
+    <em>
+        其魔女名取自宫泽贤治的《银河铁道之夜》的主角乔班尼（Giovanni），作品剧情里康贝瑞拉在课堂问答中选择用沉默的方式缓解乔班尼的腼腆与尴尬。作为意大利女性用名的“Giovanna”意为“上帝是仁慈的”。
+    </em>
+    <p class="bold">
+        “呼子鳥”是《万叶集》中的一种鸣叫声像是呼叫人的鸟，一说是大杜鹃（カッコウ、郭公）。
+    </p>
+</body>
+</html>
