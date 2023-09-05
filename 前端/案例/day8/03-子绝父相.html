@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子绝父相</title>
+    <style>
+        .father {
+            position: relative;
+            top: 100px;
+            overflow: hidden;
+            background-color: bisque;
+            width: 310px;
+            height: 210px;
+        }
+
+        .img {
+            width: 300px;
+            height: 200px;
+            margin: 5px;
+            background-color: white;
+        }
+
+        .right {
+            position: absolute;
+            top: 100px;
+            width: 10px;
+            height: 10px;
+            background-color: cornflowerblue;
+        }
+
+        .left {
+            position: absolute;
+            top: 100px;
+            width: 10px;
+            height: 10px;
+            right: 0;
+            background-color: cornflowerblue;
+        }
+
+        .buttom {
+            position: absolute;
+            width: 100px;
+            height: 10px;
+            bottom: 10px;
+            left: 10px;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="right"></div>
+        <div class="left"></div>
+        <div class="buttom"></div>
+        <div class="img"></div>
+    </div>
+</body>
+
+</html>

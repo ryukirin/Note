@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = prompt('请输入你要的操作编号：\n' +
+            '1.存钱\n' +
+            '2.取钱\n' +
+            '3.显示余额\n' +
+            '4.退出');
+        var total = 100;
+        while (num != '4') {
+            switch (num) {
+                case '1':
+                    var add = parseFloat(prompt('请输入存款数：'));
+                    total += add;
+                    alert('存款成功！目前余额为' + total);
+                    break;
+                case '2':
+                    var reduce = parseFloat(prompt('请输入取款数：'));
+                    if (reduce <= total) {
+                        total -= reduce;
+                        alert('取款成功！目前余额为' + total);
+                    }
+                    else {
+                        alert('余额不足！目前余额为' + total);
+                    }
+                    break;
+                case '3':
+                    alert('目前余额为' + total);
+                    break;
+                default:
+                    alert('请输入正确编号！');
+            }
+            num = prompt('请输入你要的操作编号：\n' +
+                '1.存钱\n' +
+                '2.取钱\n' +
+                '3.显示余额\n' +
+                '4.退出');
+        }
+        alert('已退出！');
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

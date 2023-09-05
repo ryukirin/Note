@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: cornflowerblue;
+        }
+
+        .one {
+            position: absolute;
+            /* 水平居中 */
+            left: 50%;
+            margin-left: -100px;
+            /* 垂直居中 */
+            top: 50%;
+            margin-top: -100px;
+        }
+
+        .two {
+            position: absolute;
+        }
+
+        .three {
+            float: left;
+            margin-left: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        position: absolute;<br />
+        left: 50%;<br />
+        margin-left: -100px;<br />
+        height: 200px;<br />
+        width: 200px;<br />
+        top: 50%;<br />
+        margin-top: -100px;
+    </div>
+    <div class="two">定位会压住后边的标准流文字</div>
+    start标准流文字标准流文字标准流文字标准流文字标准流文字标准流文字<br />
+    <div class="three">浮动元素不会压住标准流文字</div>
+    start标准流文字标准流文字标准流文字标准流文字标准流文字标准流文字
+</body>
+
+</html>

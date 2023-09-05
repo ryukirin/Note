@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .warma {
+            position: relative;
+            width: 336px;
+            height: 190px;
+            margin: 30px auto;
+        }
+
+        .warma img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .mask {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .3) url(./img/播放.png) no-repeat center;
+        }
+
+        .warma:hover .mask {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="warma">
+        <div class="mask"></div>
+        <img src="https://i2.hdslb.com/bfs/archive/066abed3b07c383ba0ab5e3615aef68865454c5e.jpg@336w_190h_1c.webp">
+    </div>
+</body>
+
+</html>

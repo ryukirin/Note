@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //八进制 前加0
+        var num01 = 010;
+        console.log(num01);
+        //十六进制 前加0x
+        var num02 = 0x11;
+        console.log(num02);
+        // 最大值和最小值
+        console.log(Number.MAX_VALUE);
+        console.log(Number.MIN_VALUE);
+        // 三个特殊值
+        // 无穷大
+        alert(Infinity);
+        console.log(Number.MAX_VALUE * 2);
+        // 负无穷
+        alert(-Infinity);
+        console.log(-Number.MAX_VALUE * 2);
+        // 非数值
+        alert(NaN);
+        console.log('num' - 100);
+        // isNaN 如果是数字则返回false 不是数字返回true
+        console.log(isNaN(12));
+        console.log(isNaN('num'));
+        // 获取字符串长度
+        var str = 'abcdefg';
+        console.log(str.length);
+        // 字符串的拼接
+        var newStr = 'xyz';
+        console.log(str + newStr);
+        console.log(str + 7);
+        console.log(7 + 7);
+        console.log('7' + 7);
+        // true参加运算当1来看
+        // false参加运算当0来看
+        flag = true;
+        flag1 = false;
+        console.log(flag + 1);
+        // 2
+        console.log(flag1 - 1);
+        // -1
+        console.log(flag / 1);
+        // 1
+        console.log(flag1 * 1);
+        // 0
+        // Undefined和Null
+        var v = undefined;
+        var space = null;
+        console.log(v + 'number');
+        //undefinednumber
+        console.log(space + 'number');
+        //nullnumber
+        console.log(v + 1);
+        //NaN
+        console.log(space + 1);
+        //1
+        console.log(typeof num01);
+        console.log(typeof space);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

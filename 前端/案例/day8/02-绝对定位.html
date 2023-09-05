@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: cadetblue;
+            border: 1px solid;
+        }
+
+        .one {
+            position: absolute;
+            top: 100px;
+            right: 100px;
+        }
+
+        .two {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+
+        .father {
+            position: relative;
+            top: 400px;
+            left: 0;
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        one<br />
+        position: absolute;<br />
+        top: 100px;<br />
+        right: 100px;<br />
+    </div>
+
+    <div>
+        two的父元素，因为没有定位所以two还是以浏览器为准定位
+        <div class="two">
+            two<br />
+            position: absolute;<br />
+            top: 100px;<br />
+            right: 100px;<br />
+        </div>
+    </div>
+
+    <div class="father">
+        另一个two的父元素，因为有定位所以two是以父元素为准定位
+        <div class="two">
+            two<br />
+            position: absolute;<br />
+            top: 100px;<br />
+            right: 100px;<br />
+        </div>
+        <div>
+            该div是标准流定位，绝对定位脱标，所以它占有了two的位置
+        </div>
+    </div>
+</body>
+
+</html>
