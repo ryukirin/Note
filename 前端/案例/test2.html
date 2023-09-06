@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buger</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS for Sticky Footer -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-3">
+        <h1>buger</h1>
+    </header>
+
+    <!-- Body -->
+    <div class="container my-5 content">
+        <div class="row">
+            <!-- Left Column -->
+            <div class="col-md-6">
+                <h2>連絡先</h2>
+                <p>TEL: +1 (123) 456-7890</p>
+
+                <h2>営業時間</h2>
+                <p>24時間営業</p>
+
+                <h2>定休日</h2>
+                <p>年中無休</p>
+            </div>
+
+            <!-- Right Column with Google Map -->
+            <div class="col-md-6">
+                <div class="embed-responsive embed-responsive-1by1">
+                    <iframe class="embed-responsive-item"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2dlongitude!3dlatitude!4dzoomlevel!5sYour+Location!2sen!3sUS!4sstate!5sYour+Location!3m2!1d12345.67890!2dlongitude!4dlatitude!5sYour+Location!4sstate"
+                        allowfullscreen></iframe>
+                </div>
+
+                <h2>駅</h2>
+                <p>新栄町駅</p>
+                <p>髙岳駅</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        &copy; 2023 公司名称. 版权所有.
+    </footer>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
